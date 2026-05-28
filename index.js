@@ -24,7 +24,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-mongoose.connect(process.env.MONGODB_STRING);
+mongoose.connect(process.env.MONGO_URI);
 
 mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atlas.'))
 
